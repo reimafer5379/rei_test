@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Модули &#8212; Light &#39;em up! Documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=5ecbeea2" />
+    <link rel="stylesheet" type="text/css" href="_static/basic.css?v=b08954a9" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css?v=27fed22d" />
+    <script src="_static/documentation_options.js?v=f2a433a1"></script>
+    <script src="_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Views" href="views.html" />
+    <link rel="prev" title="Light ‘em up! documentation" href="index.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+
+  
+  
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="id1">
+<h1>Модули<a class="headerlink" href="#id1" title="Link to this heading">¶</a></h1>
+<div class="admonition-todo admonition" id="id2">
+<p class="admonition-title">Todo</p>
+<p>Background sprites are not used because there is no background rendering implementation. This needs to be fixed</p>
+</div>
+<p id="module-task5">Puzzle game created by REI_F.
+Features:
+* Sprites customization
+* Automatic animation when game over
+* Optimized for Ubuntu run
+Last version: 1.0
+Released: 05/05/2026</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="task5.Startscreen">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">task5.</span></span><span class="sig-name descname"><span class="pre">Startscreen</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">master</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">assets</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/task5.html#Startscreen"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#task5.Startscreen" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>Implementation of the game’s start screen.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="task5.Startscreen.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">master</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">assets</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/task5.html#Startscreen.__init__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#task5.Startscreen.__init__" title="Link to this definition">¶</a></dt>
+<dd><p>A constructor method for initializing the parameters of a class object and creating the startscreen window.</p>
+<p>During the work, there are the window name, resolution, and scaling parameters will be set,
+as well as created and placed interface elements, such as a combo box for selecting the game field resolution and START and FINISH buttons.
+:param assets: a list of paths to game sprites, required for subsequent transfer to the Game child class
+:param master: the source of the created window, which will be transferred to the Game master child class</p>
+<p>return: Nothing
+rtype: None</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="task5.Startscreen.board_size_calc">
+<span class="sig-name descname"><span class="pre">board_size_calc</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/task5.html#Startscreen.board_size_calc"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#task5.Startscreen.board_size_calc" title="Link to this definition">¶</a></dt>
+<dd><p>Calculating the resolution of the game field using the value selected by the user on the start screen.
+If no value is selected, 4 is automatically set as the lowest value.</p>
+<p>rtype: None</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="task5.Startscreen.start">
+<span class="sig-name descname"><span class="pre">start</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/task5.html#Startscreen.start"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#task5.Startscreen.start" title="Link to this definition">¶</a></dt>
+<dd><p>Destroying the startscreen window, creating the game window, and launching the game.
+Activated when the START button is clicked</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="task5.Startscreen.finish">
+<span class="sig-name descname"><span class="pre">finish</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/task5.html#Startscreen.finish"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#task5.Startscreen.finish" title="Link to this definition">¶</a></dt>
+<dd><p>Destroying the startscreen window.
+Activated when the FINISH button is clicked</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="task5.Game">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">task5.</span></span><span class="sig-name descname"><span class="pre">Game</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">master</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">blockCnt</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">winSize</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">assets</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/task5.html#Game"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#task5.Game" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>Implementation of the gameboard.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="task5.Game.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">master</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">blockCnt</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">winSize</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">assets</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/task5.html#Game.__init__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#task5.Game.__init__" title="Link to this definition">¶</a></dt>
+<dd><p>A constructor method for initializing the parameters of a class object and creating the gameboard window.</p>
+<p>During the work, there are the window name, resolution, and scaling parameters will be set,
+as well as created and placed interface elements, such as a combo box for selecting the game field resolution and START and FINISH buttons.
+Parameters (were transferred from the Startscreen parent class):
+master : the source of the created window
+blocknt: expansion of the gameboard
+winSize: expansion of the whole game window
+assets: a list of paths to game sprites, required for subsequent</p>
+<p>return: Nothing
+rtype: None</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="task5.Game.arr_cell">
+<span class="sig-name descname"><span class="pre">arr_cell</span></span><a class="headerlink" href="#task5.Game.arr_cell" title="Link to this definition">¶</a></dt>
+<dd><p>arr_cell - “code-status” list
+DEFINITION:
+code-status - block sprite ID, depending on its type (linear/angular) and current rotation</p>
+<p>STRUCTURE:
+[0] - block rt code status,
+[1] - block code status in Hamiltonian traversal,
+[2] - block position in H/T</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="task5.Game.blocksize">
+<span class="sig-name descname"><span class="pre">blocksize</span></span><a class="headerlink" href="#task5.Game.blocksize" title="Link to this definition">¶</a></dt>
+<dd><p>Calculation of the game field block sprite resolution,
+depending on the selected field size, the sprites will be scaled</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="task5.Game.timer_v2">
+<span class="sig-name descname"><span class="pre">timer_v2</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/task5.html#Game.timer_v2"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#task5.Game.timer_v2" title="Link to this definition">¶</a></dt>
+<dd><p>timer_v2 - creating an interface and starting a timer</p>
+<p>The interface frame is also divided into two frames:
+one for the timer and one for the buttons.
+Local variables:
+rem_time - The time allocated to the player for solving the puzzle
+depends on the number of blocks selected on the game board.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="task5.Game.update_timer">
+<span class="sig-name descname"><span class="pre">update_timer</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/task5.html#Game.update_timer"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#task5.Game.update_timer" title="Link to this definition">¶</a></dt>
+<dd><p>Updating the timer value and animating the progress bar</p>
+<p>if self.rungame is False, it will not start.
+Every 1000 ms, it updates the timer value by reducing the self.rem_time by one with each iteration</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="task5.Game.stop_timer">
+<span class="sig-name descname"><span class="pre">stop_timer</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/task5.html#Game.stop_timer"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#task5.Game.stop_timer" title="Link to this definition">¶</a></dt>
+<dd><p>Checking self.PID and self.progress
+and stopping the progressbar correctly</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="task5.Game.draw">
+<span class="sig-name descname"><span class="pre">draw</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/task5.html#Game.draw"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#task5.Game.draw" title="Link to this definition">¶</a></dt>
+<dd><p>Layer-by-layer rendering of gameboard blocks and binding the button fucntion after click
+The structure of the sprite block of the gameboard:
+Frame object -&gt; Canvas object -&gt; background sprite -&gt; pipe sprite</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="task5.Game.click">
+<span class="sig-name descname"><span class="pre">click</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">event</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/task5.html#Game.click"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#task5.Game.click" title="Link to this definition">¶</a></dt>
+<dd><p>Transition function required for correct handling of widget clicks</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="task5.Game.rotate">
+<span class="sig-name descname"><span class="pre">rotate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/task5.html#Game.rotate"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#task5.Game.rotate" title="Link to this definition">¶</a></dt>
+<dd><p>Rotating the pipe sprite in the block after click</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="task5.Game.block_update">
+<span class="sig-name descname"><span class="pre">block_update</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mode</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/task5.html#Game.block_update"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#task5.Game.block_update" title="Link to this definition">¶</a></dt>
+<dd><p>Block sprite update: removing the previous object and drawing a new sprite in one of the modes
+Update modes:
+UPDATE - Drawing a new sprite after interacting with a block
+HIGHLIGHT - highlighting a sprite after connecting it to another highlighted one
+ENDGAME - Replacing the block sprite with the “correct” version from the Hamilton traversal,
+which is needed for animating the field after a time over</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="task5.Game.highlight">
+<span class="sig-name descname"><span class="pre">highlight</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/task5.html#Game.highlight"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#task5.Game.highlight" title="Link to this definition">¶</a></dt>
+<dd><p>Implementation of lighting for the game field blocks when connected correctly</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="task5.Game.build_path">
+<span class="sig-name descname"><span class="pre">build_path</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">vis_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">path_list</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/task5.html#Game.build_path"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#task5.Game.build_path" title="Link to this definition">¶</a></dt>
+<dd><p>Converting the coordinates of the vertices of a Hamiltonian graph into blocks of a game board</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="task5.Game.show">
+<span class="sig-name descname"><span class="pre">show</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/task5.html#Game.show"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#task5.Game.show" title="Link to this definition">¶</a></dt>
+<dd><p>Locking the game board and preparing the puzzle solution animation</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="task5.Game.animate">
+<span class="sig-name descname"><span class="pre">animate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">step</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/task5.html#Game.animate"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#task5.Game.animate" title="Link to this definition">¶</a></dt>
+<dd><p>Animation of the puzzle solution and display of the timeout message</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="task5.Game.labyrinth">
+<span class="sig-name descname"><span class="pre">labyrinth</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/task5.html#Game.labyrinth"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#task5.Game.labyrinth" title="Link to this definition">¶</a></dt>
+<dd><p>Converting vertex coordinates to specific types of game board blocks.
+Intermediate function between hamilton_gen() and build_path()</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="task5.Game.remix">
+<span class="sig-name descname"><span class="pre">remix</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/task5.html#Game.remix"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#task5.Game.remix" title="Link to this definition">¶</a></dt>
+<dd><p>Shuffling the game field blocks in a pseudo-random order</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="task5.Game.hamilton_gen">
+<span class="sig-name descname"><span class="pre">hamilton_gen</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/task5.html#Game.hamilton_gen"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#task5.Game.hamilton_gen" title="Link to this definition">¶</a></dt>
+<dd><p>Building a Hamilton path as an array of coordinates</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="task5.Game.quit">
+<span class="sig-name descname"><span class="pre">quit</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/task5.html#Game.quit"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#task5.Game.quit" title="Link to this definition">¶</a></dt>
+<dd><p>Ending the game, stopping the timer and destroying the gameboard window</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="task5.Game.gameboard_lock">
+<span class="sig-name descname"><span class="pre">gameboard_lock</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/task5.html#Game.gameboard_lock"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#task5.Game.gameboard_lock" title="Link to this definition">¶</a></dt>
+<dd><p>Locking the game board before the puzzle solution animation</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="task5.Game.win">
+<span class="sig-name descname"><span class="pre">win</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/task5.html#Game.win"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#task5.Game.win" title="Link to this definition">¶</a></dt>
+<dd><p>Ending the game with the game field locked, the timer stopped, and a message about winning</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="task5.Game.new_game">
+<span class="sig-name descname"><span class="pre">new_game</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/task5.html#Game.new_game"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#task5.Game.new_game" title="Link to this definition">¶</a></dt>
+<dd><p>Ending the current game session, stopping the timer, destroying the game board window, and starting a new game</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="task5.Game.game_over">
+<span class="sig-name descname"><span class="pre">game_over</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/task5.html#Game.game_over"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#task5.Game.game_over" title="Link to this definition">¶</a></dt>
+<dd><p>A transition function that ends the game when defeated and triggers the defeat scenario</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">Light 'em up!</a></h1>
+
+
+
+
+
+
+
+
+
+<search id="searchbox" style="display: none" role="search">
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Search"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script><h3>Navigation</h3>
+<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Модули</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#task5.Startscreen"><code class="docutils literal notranslate"><span class="pre">Startscreen</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#task5.Game"><code class="docutils literal notranslate"><span class="pre">Game</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="views.html">Views</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="index.html" title="previous chapter">Light ‘em up! documentation</a></li>
+      <li>Next: <a href="views.html" title="next chapter">Views</a></li>
+  </ul></li>
+</ul>
+</div>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &#169;2026, REI_F.
+      
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 9.1.0</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 1.0.0</a>
+      
+      |
+      <a href="_sources/modules.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

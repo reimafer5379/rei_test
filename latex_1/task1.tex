@@ -1,0 +1,154 @@
+\documentclass[a4paper, 12pt]{report}
+\usepackage{graphicx}
+\graphicspath{ {~/inf/latex_1/images} }
+\usepackage{lscape}
+\usepackage[english,russian]{babel}
+\usepackage[left=2cm, right=1cm, top=2cm, bottom=2cm]{geometry}
+\usepackage{listings}
+\usepackage{setspace}
+\usepackage{pdflscape}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=red,
+    pdfpagemode=FullScreen,
+    }
+\onehalfspacing
+
+\title{"PC Engine" - the greatest technical adventure}
+\author{Efremov Evgeni Yurievich}
+\date{February 2026}
+
+\begin{document}
+
+\maketitle
+\begin{abstract}
+\color{white}
+\colorbox{red}{Тема: историческое исследование домашней игровой консоли}
+\color{black}
+\newlineКлючевые слова: PC Engine, $CD-ROM^2$, Hudson Soft, NEC
+\end{abstract}
+
+\begin{figure}
+\includegraphics[width = 0.5\textwidth]{PC_ENGINE.jpg}
+\end{figure}
+
+В октябре 1987 года компании Hudson Soft и NEC представили домашнюю игровую систему PC Engine - компактное и мощное устройство с революционной моделью развития. На старте консоль уже била рекорды: продукт был включён в книгу рекордов Гиннеса как самая компактная игровая система, при этом по мощности\footnote{Характеристики устройства представлены в отдельном разделе на странице 2\pageref{second}.} она ничуть не отставала от главенствующего игрока на рынке того времени - Nintendo Famicom. Первоначально носителем данных были выбраны картриджи в форм-факторе компактных карточек - HuCard, размер хранимых данных на которых изначально составлял 256Кб и в дальнейшем был расширен до 24Мб с помощью технологии переключения банков памяти. Но сама консоль была всего лишь ядром целой экосистемы устройств, выпущенных компаниями за долгие 12 лет жизненного цикла системы. Среди них были CD-ROM привод, с помощью которого консоль могла воспроизводить программы с компакт-дисков формата Audio CD, CD+G, $CD-ROM^2$ и $Super CD-ROM^2$ (последние два формата - уникальные разработки программистов из Hudson). Также были выпущены модули энергонезависимой памяти для сохранений прогресса, портативные модели PC Engine GT, как отдельное устройство в отличном корпусе, и PC Engine LT, как модификация стандартной PC Engine со встроенным экраном, с TV-тюнером, возможностью совместной игры при помощи аксессуара "COM Cable" и совместимостью с большинством аксессуаров и многое другое.
+
+\begin{landscape}
+\pagecolor{black}
+\color{white}
+Технические Характеристики
+\begin{enumerate}
+\item Процессор - 8-битный MOS Technology 65SC02 (также имеющий название HuC6280 от Hudson) — 8-битные регистры и шина данных, 16-битная адресная шина и счетчик. Частота CPU 1.79 или 7.16 МГц (выбирается программно).
+\item Видео
+\begin{itemize}
+    \item Видеосистема: два 16-битных процессора — HuC6270 и HuC6260.
+    \item Разрешение экрана: 256 x 216 пикселей.
+    \item Спрайты: до 64, размером от 16x16 до 32x64, 16-цветные.
+    \item Цветов на экране: 512 — (256 для спрайтов и 256 для фона).
+    \item Видеопамять: 64 Кб (для TurboDuo: 512Кб)
+\end{itemize}
+\item Звук
+\begin{itemize}
+    \item Звуковой процессор: 8 бит PCM стерео / 6-канальное стерео.
+\end{itemize}
+\item Оперативная память - 8 Кбайт.
+\item Носители
+\begin{itemize}
+    \item Ёмкость картриджа: от 256 килобайт до 24 мегабайт.
+\end{itemize}
+\item Привод CD-ROM - Скорость 1x (в качестве отдельного адд-она к приставке)
+\end{enumerate}
+\end{landscape}
+
+\pagecolor{white}
+\color{black}
+Хронология выпуска устройств (Япония)\newline
+
+\begin{tabular}{|c|c|} 
+ \hline
+ Устройство & Дата выхода \\
+ \hline \hline
+ PC Engine  & 30.10.1987  \\
+ \hline
+ PC Engine $CD-ROM^2$ & 4.12.1988 \\
+ \hline
+ PC Engine Shuttle & 22.11.1989 \\
+ \hline
+ PC Engine CoreGrafx & 8.12.1989 \\
+ \hline
+ PC Engine SuperGrafx & 8.12.1989 \\
+ \hline
+ PC Engine GT & 1990 \\
+ \hline
+ PC Engine Duo & 21.09.1991 \\
+ \hline
+ PC Engine LT & 13.12.1991 \\
+ \hline
+ PC Engine Duo-R & 1993 \\
+ \hline
+ PC Engine Duo-RX & 1994 \\
+ \hline
+\end{tabular}
+\newline
+
+Хронология выпуска устройств (США)\newline
+
+\begin{tabular}{|c c|c|} 
+ \hline
+ Устройство & Аналог в Японии & Дата выхода \\
+ \hline \hline
+ TurboGrafx-16 & PC Engine  & 29.08.1989  \\
+ \hline
+ TurboGrafx-CD & PC Engine $CD-ROM^2$ & 1990 \\
+ \hline
+ Turbo Express & PC Engine GT & 1990 \\
+ \hline
+ Turbo Duo & PC Engine Duo & 21.09.1991 \\
+ \hline
+\end{tabular}
+\newline
+
+С полной хронологией выпуска устройств и аксессуаров вы можете ознакомиться \href{https://pcengine.ru/history-of-consoles-pc-engine-turbografx-16/}{ЗДЕСЬ}
+
+\begin{lstlisting}[language=C]
+
+#include <stdio.h>
+
+int main()
+{
+	/*GREETINGS OUTPUT*/
+	fprintf(stdout, "HELLO, STUDENTS!\n");
+
+	return 0;
+}
+\end{lstlisting}
+
+\newpage
+\begin{lstlisting}[language=Python]
+def k_check(n, k):
+    n_s = str(n)
+    n_split = list(map(int, n_s.split()))
+    res = n
+    for i in range (len(n_split) - 1):
+        res += n_split[i]
+    if res == k:
+        return True
+    else:
+        return False
+
+k = int(input())
+result = 0
+for m in range(1, 10**(len(str(k))+1)):
+    if k_check(m, k) == True:
+        result = m
+if result == 0:
+    print(-1)
+else:
+    print(result)
+\end{lstlisting}
+\end{document}
